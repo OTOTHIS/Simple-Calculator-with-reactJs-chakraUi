@@ -38,7 +38,6 @@ const App = () => {
       result.pop(); // Remove the last character
       result = result.join(""); // Join the remaining characters
 
-      console.log(result);
       setVal(result);
     } else {
       setVal((prev) => String(prev) + String(message));
@@ -47,7 +46,7 @@ const App = () => {
 
   return (
     <Box
-      p={5}
+     
       bgGradient="linear(to-l, #7928CA, #FF0080)"
       height="100vh"
       display={"grid"}
