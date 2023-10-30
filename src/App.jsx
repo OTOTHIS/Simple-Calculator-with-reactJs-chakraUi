@@ -6,26 +6,8 @@ import Gritem from "./grdItem";
 import { useRef, useState } from "react";
 
 const App = () => {
-  const arr = [
-    "AC",
-    "DEL",
-    "/",
-    1,
-    2,
-    3,
-    "*",
-    4,
-    5,
-    6,
-    "+",
-    7,
-    8,
-    9,
-    "-",
-    ".",
-    0,
-    "=",
-  ];
+  const arr = ["AC","DEL","/",1,2,3,"*",4,
+    5,6,"+",7,8,9,"-",".",0,"=",];
   const [val, setVal] = useState("");
   const inputVal = useRef("");
   const handleClick = (message) => {
@@ -35,8 +17,8 @@ const App = () => {
       setVal("");
     } else if (message === "DEL") {
       let result = inputVal.current.value.split("");
-      result.pop(); // Remove the last character
-      result = result.join(""); // Join the remaining characters
+      result.pop();
+      result = result.join(""); 
 
       setVal(result);
     } else {
